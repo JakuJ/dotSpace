@@ -2,6 +2,7 @@
 using dotSpace.BaseClasses.Space;
 using dotSpace.Interfaces;
 using dotSpace.Interfaces.Space;
+using dotSpace.Objects.Utility;
 
 namespace dotSpace.Objects.Space
 {
@@ -19,7 +20,7 @@ namespace dotSpace.Objects.Space
         /// Initializes a new instance of the PileSpace class. All tuples will be created using the provided tuple factory;
         /// if none is provided the default TupleFactory will be used.
         /// </summary>
-        public PileSpace(ITupleFactory tuplefactory = null) : base(tuplefactory ?? new TupleFactory())
+        public PileSpace(ITupleFactory tuplefactory = null) : base(tuplefactory ?? new TupleFactory(), new PerTypeBucket())
         {
         }
 
